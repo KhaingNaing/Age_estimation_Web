@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Age_estimation_Web/static/css/main.05c85988.css",
+    "main.js": "/Age_estimation_Web/static/js/main.2a1ebf41.js",
+    "static/js/453.d8d5c0e1.chunk.js": "/Age_estimation_Web/static/js/453.d8d5c0e1.chunk.js",
+    "index.html": "/Age_estimation_Web/index.html",
+    "main.05c85988.css.map": "/Age_estimation_Web/static/css/main.05c85988.css.map",
+    "main.2a1ebf41.js.map": "/Age_estimation_Web/static/js/main.2a1ebf41.js.map",
+    "453.d8d5c0e1.chunk.js.map": "/Age_estimation_Web/static/js/453.d8d5c0e1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05c85988.css",
+    "static/js/main.2a1ebf41.js"
+  ]
+}
