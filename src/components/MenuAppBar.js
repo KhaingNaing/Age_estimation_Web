@@ -81,7 +81,7 @@ export default function MenuAppBar() {
                 }}
               >
                 <img
-                  src="/account.jpg" 
+                  src={`${process.env.PUBLIC_URL}/account.jpg` }
                   alt="Account"
                   style={{ width: 30, height: 30, objectFit: 'cover', borderRadius: '50%'}} // Adjust size as needed
                 />

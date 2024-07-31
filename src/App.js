@@ -72,7 +72,7 @@ function App() {
       >
         <Box
           component="img"
-          src='/background-pic.jpg'
+          src={`${process.env.PUBLIC_URL}/background-pic.jpg`}
           alt="Background"
           sx={{
             position: 'absolute',
