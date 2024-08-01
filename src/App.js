@@ -34,8 +34,10 @@ function App() {
     const formData = new FormData();
     formData.append('file', selectedFile);
 
+    const backendUrl = 'https://shark-app-whsg7.ondigitalocean.app';
+
     try {
-      const response = await fetch('http://localhost:5000/predict', {
+      const response = await fetch(`${backendUrl}/predict`, {
         method: 'POST',
         body: formData,
       });
@@ -110,7 +112,7 @@ function App() {
         <Typography variant='body' component='body' fontFamily='sans-serif' sx={{mx:4}} gutterBottom>
         Try Out Our Age Prediction Model! <br/>
 
-Upload a selfie to see how our simple CNN model estimates your age. This model has around 6,000 parameters and provides quick predictions based on your uploaded image.        </Typography>
+Upload a selfie to see how our simple CNN model estimates your age. This model has 621,857 parameters and provides quick predictions based on your uploaded image.        </Typography>
         <form onSubmit={handleSubmit}>
           <label htmlFor='upload-photo'>
             <Input
