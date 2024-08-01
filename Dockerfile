@@ -5,9 +5,9 @@ FROM continuumio/miniconda3
 WORKDIR /app
 
 # Copy the environment.yml file to /app in the docker container
-COPY environment.yml .
+COPY backend/environment.yml .
 
-COPY checkpoints /app/checkpoints
+COPY backend/checkpoints /app/checkpoints
 
 # Install the Conda env 
 RUN conda env create -f environment.yml
@@ -16,7 +16,7 @@ RUN conda env create -f environment.yml
 SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
 
 # Copy the rest of the application code 
-COPY . .
+COPY backend /app
 
 # Expose the port the app runs on 
 EXPOSE 5000

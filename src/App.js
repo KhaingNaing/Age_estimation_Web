@@ -34,7 +34,7 @@ function App() {
     const formData = new FormData();
     formData.append('file', selectedFile);
 
-    const backendUrl = 'https://shark-app-whsg7.ondigitalocean.app';
+    const backendUrl = 'https://starfish-app-rcuur.ondigitalocean.app';
 
     try {
       const response = await fetch(`${backendUrl}/predict`, {
