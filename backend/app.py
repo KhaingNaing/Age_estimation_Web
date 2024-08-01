@@ -26,6 +26,10 @@ model.load_state_dict(latest_checkpoint["model_state_dict"])
 def home():
     return "Welcome to the Age Estimation API!"
 
+@app.route('/test', methods=['GET'])
+def test():
+    return "Test route is working!"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
