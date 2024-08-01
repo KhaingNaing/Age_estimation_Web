@@ -18,8 +18,11 @@ SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
 # Copy the rest of the application code 
 COPY . .
 
-# Expose the port the app runs on i
+# Expose the port the app runs on 
 EXPOSE 5000
 
+# Entry point to activate conda environment and run the application
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "myenv"]
+
 # Run the application 
-CMD ["conda", "run", "--no-capture-output", "-n", "myenv", "gunicorn", "-b", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
