@@ -11,7 +11,7 @@ from model import SimpleCNN
 
 # Initialize the Flask App
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://khaingnaing.github.io"}})
 
 # Load the model 
 path = 'checkpoints/epoch-23-valid_loss-6.09.pth'
