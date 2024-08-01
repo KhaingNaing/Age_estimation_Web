@@ -14,7 +14,7 @@ config = {
     "model_name": "simple_cnn",
 
     # Device configuration
-    "device": "cuda" if torch.cuda.is_available() else "cpu",
+    "device": "cpu",
 
     # Paths for inference result
     "image_path": "img_test/",

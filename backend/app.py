@@ -14,10 +14,11 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the model 
-path = "/home/norakami/Age_estimation_Web/backend/checkpoints/epoch-23-valid_loss-6.09.pth"
+path = 'checkpoints/epoch-23-valid_loss-6.09.pth'
+# path = "/home/norakami/Age_estimation_Web/backend/checkpoints/epoch-23-valid_loss-6.09.pth"
 model = SimpleCNN(input_dim=3, output_nodes=1, model_name="simple_cnn").to(config["device"])
 # load best model from the latest checkpoint
-latest_checkpoint = torch.load(path)
+latest_checkpoint = torch.load(path, map_location=config["device"])
 model.load_state_dict(latest_checkpoint["model_state_dict"])
 
 # Define a route for the root URL
@@ -62,6 +63,6 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
     
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=5000, debug=True)
 
