@@ -34,10 +34,10 @@ function App() {
     const formData = new FormData();
     formData.append('file', selectedFile);
 
-    // const backendUrl = 'https://starfish-app-rcuur.ondigitalocean.app';
+    const backendUrl = 'https://octopus-app-7439h.ondigitalocean.app/predict';
 
     try {
-      const response = await fetch('http://localhost:5000/predict', {
+      const response = await fetch(backendUrl, {
         method: 'POST',
         body: formData,
       });
